@@ -1,0 +1,24 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter Notebook checkpoints
+*.ipynb_checkpoints
+
+# Datos
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep    # Mantiene la carpeta aunque esté vacía
+!data/processed/.gitkeep
+
+# Modelos
+models/*.pkl
+models/*.joblib
+models/tests/*
+!models/tests/.gitkeep
+
+# Variables de entorno y configuración local
+.env
+.DS_Store
