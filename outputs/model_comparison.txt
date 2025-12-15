@@ -1,0 +1,88 @@
+MODEL COMPARISON
+       model  accuracy
+    LightGBM  0.854233
+     XGBoost  0.852403
+RandomForest  0.847998
+   NeuralNet  0.837757
+DecisionTree  0.797941
+
+=== DecisionTree ===
+Accuracy: 0.7979
+Confusion matrix:
+[[10862  1813]
+ [ 1719  3086]]
+Classification report:
+              precision    recall  f1-score   support
+
+           0     0.8634    0.8570    0.8602     12675
+           1     0.6299    0.6422    0.6360      4805
+
+    accuracy                         0.7979     17480
+   macro avg     0.7466    0.7496    0.7481     17480
+weighted avg     0.7992    0.7979    0.7985     17480
+
+
+=== RandomForest ===
+Accuracy: 0.8480
+Confusion matrix:
+[[11777   898]
+ [ 1759  3046]]
+Classification report:
+              precision    recall  f1-score   support
+
+           0     0.8701    0.9292    0.8986     12675
+           1     0.7723    0.6339    0.6963      4805
+
+    accuracy                         0.8480     17480
+   macro avg     0.8212    0.7815    0.7975     17480
+weighted avg     0.8432    0.8480    0.8430     17480
+
+
+=== XGBoost ===
+Accuracy: 0.8524
+Confusion matrix:
+[[11629  1046]
+ [ 1534  3271]]
+Classification report:
+              precision    recall  f1-score   support
+
+           0     0.8835    0.9175    0.9001     12675
+           1     0.7577    0.6807    0.7172      4805
+
+    accuracy                         0.8524     17480
+   macro avg     0.8206    0.7991    0.8087     17480
+weighted avg     0.8489    0.8524    0.8498     17480
+
+
+=== LightGBM ===
+Accuracy: 0.8542
+Confusion matrix:
+[[11626  1049]
+ [ 1499  3306]]
+Classification report:
+              precision    recall  f1-score   support
+
+           0     0.8858    0.9172    0.9012     12675
+           1     0.7591    0.6880    0.7218      4805
+
+    accuracy                         0.8542     17480
+   macro avg     0.8225    0.8026    0.8115     17480
+weighted avg     0.8510    0.8542    0.8519     17480
+
+
+=== NeuralNet ===
+Accuracy: 0.8378
+Confusion matrix:
+[[11675  1000]
+ [ 1836  2969]]
+Classification report:
+              precision    recall  f1-score   support
+
+           0     0.8641    0.9211    0.8917     12675
+           1     0.7480    0.6179    0.6768      4805
+
+    accuracy                         0.8378     17480
+   macro avg     0.8061    0.7695    0.7842     17480
+weighted avg     0.8322    0.8378    0.8326     17480
+
+

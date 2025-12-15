@@ -9,9 +9,9 @@ def load_raw_data():
     if not os.path.exists(config.RAW_DATA_PATH):
         raise FileNotFoundError(f"El archivo no existe en: {config.RAW_DATA_PATH}")
     
-    print(f"🔄 Cargando datos desde: {config.RAW_DATA_PATH}")
+    print(f"Cargando datos desde: {config.RAW_DATA_PATH}")
     df = pd.read_csv(config.RAW_DATA_PATH)
-    print(f"✅ Datos cargados. Shape inicial: {df.shape}")
+    print(f"Datos cargados. Shape inicial: {df.shape}")
     return df
 
 def clean_data(df):
@@ -37,7 +37,7 @@ def clean_data(df):
 
 def encode_data(df):
     """One-Hot Encoding para separar X e y."""
-    print("⚙️ Transformando variables categóricas...")
+    print("Transformando variables categóricas...")
     
     target = 'is_canceled'
     if target not in df.columns:
@@ -47,7 +47,7 @@ def encode_data(df):
     X = df.drop(columns=[target])
     
     X_encoded = pd.get_dummies(X, drop_first=True)
-    print(f"✅ Encoding completado. Features: {X_encoded.shape[1]}")
+    print(f"Encoding completado. Features: {X_encoded.shape[1]}")
     return X_encoded, y
 
 def split_and_scale(X, y, test_size=0.2, random_state=42):
@@ -56,12 +56,12 @@ def split_and_scale(X, y, test_size=0.2, random_state=42):
     2. Escala las variables numéricas para que tengan media 0 y desviación 1.
     IMPORTANTE: El scaler se entrena solo con X_train para evitar data leakage.
     """
-    print(f"✂️ Dividiendo datos (Test size: {test_size})...")
+    print(f"Dividiendo datos (Test size: {test_size})...")
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=test_size, random_state=random_state, stratify=y
     )
     
-    print("⚖️ Escalando datos (StandardScaler)...")
+    print("Escalando datos (StandardScaler)...")
     scaler = StandardScaler()
     
     # Aprendemos la escala solo del train y transformamos ambos
@@ -72,7 +72,7 @@ def split_and_scale(X, y, test_size=0.2, random_state=42):
     X_train_df = pd.DataFrame(X_train_scaled, columns=X.columns)
     X_test_df = pd.DataFrame(X_test_scaled, columns=X.columns)
     
-    print("✅ Datos listos para entrar al modelo.")
+    print("Datos listos para entrar al modelo.")
     print(f"   Train shape: {X_train_df.shape}")
     print(f"   Test shape:  {X_test_df.shape}")
     
