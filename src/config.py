@@ -12,6 +12,11 @@ PROCESSED_DATA_PATH = DATA_DIR / "processed" / "hotel_bookings_cleaned.csv"
 # Rutas de modelos y resultados
 MODELS_DIR = BASE_DIR / "models"
 OUTPUTS_DIR = BASE_DIR / "outputs"
+ARTIFACTS_DIR = MODELS_DIR / "artifacts"
+
+# Artefactos auxiliares
+FEATURE_DEFAULTS_PATH = ARTIFACTS_DIR / "feature_defaults.json"
+BEST_MODEL_PATH = MODELS_DIR / "boost_lightgbm.joblib"
 
 # Parámetros aleatorios (para reproducibilidad)
 RANDOM_SEED = 42

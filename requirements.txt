@@ -8,3 +8,5 @@ lightgbm
 tensorflow
 joblib
 jupyter
+shap
+streamlit
