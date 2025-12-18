@@ -63,6 +63,8 @@ El proyecto cumple con el flujo completo de un sistema de IA. Como mejora futura
 
 ## 7. Evidencias Visuales del Rendimiento
 
+![Frontend](../outputs/frontend.png)
+
 ### 7.1 Matriz de Confusión
 Podemos observar cómo el modelo se comporta clasificando las cancelaciones.
 ![Matriz de Confusión](../outputs/confusion_matrix.png)
