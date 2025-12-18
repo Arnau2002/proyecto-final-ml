@@ -60,3 +60,13 @@ Se han entrenado y comparado los siguientes modelos:
 
 ## 6. Reflexión Final
 El proyecto cumple con el flujo completo de un sistema de IA. Como mejora futura, proponemos implementar **MLflow** para un registro más detallado de experimentos y dockerizar la aplicación para su despliegue en nube (AWS/Azure).
+
+## 7. Evidencias Visuales del Rendimiento
+
+### 7.1 Matriz de Confusión
+Podemos observar cómo el modelo se comporta clasificando las cancelaciones.
+![Matriz de Confusión](../outputs/confusion_matrix.png)
+
+### 7.2 Curva ROC
+El área bajo la curva (AUC) de **0.92** indica una excelente capacidad de separación entre clases.
+![Curva ROC](../outputs/roc_curve.png)
